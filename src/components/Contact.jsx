@@ -12,13 +12,13 @@ import { Waypoint } from "react-waypoint";
 
 function Contact(props) {
     return (
-        <div className="flex flex-row justify-center items-center p-10 md:justify-start md:items-start snap-end snap-always md:pl-28 md:py-20 bg-primary">
+        <div className="flex flex-row p-10 justify-start items-start snap-end snap-always pl-28 py-20 bg-primary">
             <div className="flex flex-col">
-                <h1 className="font-bold text-4xl md:text-6xl text-white mb-10">
+                <h1 className="font-bold text-6xl text-white mb-10">
                     Contact
                 </h1>
                 <Waypoint onEnter={() => props.waypointCallback("5")} />
-                <ul className="font-normal text-white text-md md:text-xl">
+                <ul className="font-normal text-white text-xl">
                     <li className="mt-5">
                         <FontAwesomeIcon icon={faBuilding} />
                         <span className="font-semibold">
@@ -44,7 +44,7 @@ function Contact(props) {
                         <span className="font-semibold"> Email:</span>{" "}
                         <Link
                             href="mailto:mail@example.com"
-                            className="text-white underline md:text-xl"
+                            className="text-white underline text-xl"
                         >
                             mail@example.com
                         </Link>
@@ -57,7 +57,7 @@ function Contact(props) {
                         </span>{" "}
                         <Link
                             href="https://example.com"
-                            className="text-white underline md:text-xl"
+                            className="text-white underline text-xl"
                             isExternal
                             showAnchorIcon
                         >

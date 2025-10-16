@@ -54,11 +54,11 @@ function Market(props) {
 
     return (
         <div className="flex flex-row mt-40 snap-center snap-always noScrollbar scroll-smooth">
-            <div className="hidden md:sticky md:top-16 md:h-screen md:flex md:flex-col md:justify-center">
+            <div className="sticky top-16 h-screen flex flex-col justify-center">
                 <Tabs
                     isVertical
                     size="lg"
-                    className="px-5 md:px-10 lg:px-20 font-bold"
+                    className="px-10 lg:px-20 font-bold"
                     color="primary"
                     variant="underlined"
                     selectedKey={selected}
@@ -70,29 +70,14 @@ function Market(props) {
                     <Tab key={"4"} title="Section 4"></Tab>
                 </Tabs>
             </div>
-            <div className="md:hidden h-screen sticky top-16 flex justify-center items-center">
-                <Slider
-                    orientation="vertical"
-                    className="h-1/3 transition-all ease-in-out"
-                    minValue={0}
-                    maxValue={4}
-                    step={1}
-                    value={sliderValue}
-                    size="sm"
-                    hideThumb
-                    aria-label="slider"
-                    renderThumb={(props) => <div {...props}></div>}
-                ></Slider>
-            </div>
             <div className="h-screen">
                 <Waypoint onEnter={() => props.waypointCallback("3")} />
             </div>
-            <div className="w-full px-5 md:px-0 md:w-2/3 text-pretty overflow-scroll snap-y snap-mandatory h-screen noScrollbar scroll-smooth">
+            <div className="px-0 w-2/3 text-pretty overflow-scroll snap-y snap-mandatory h-screen noScrollbar scroll-smooth">
                 <section
                     ref={section1}
                     className="snap-center snap-always min-h-screen flex flex-col justify-center"
                 >
-                    <h1 className="md:hidden">Market Comments</h1>
                     <Waypoint
                         fireOnRapidScroll={false}
                         key="key"
@@ -117,7 +102,6 @@ function Market(props) {
                     ref={section2}
                     className="snap-center snap-always min-h-screen flex flex-col justify-center"
                 >
-                    <h1 className="md:hidden">Market Comments</h1>
                     <Waypoint
                         fireOnRapidScroll={false}
                         key="key"
@@ -139,7 +123,6 @@ function Market(props) {
                     ref={section3}
                     className="snap-center snap-always min-h-screen flex flex-col justify-center"
                 >
-                    <h1 className="md:hidden">Market Comments</h1>
                     <Waypoint
                         fireOnRapidScroll={false}
                         key="key"
@@ -164,7 +147,6 @@ function Market(props) {
                     ref={section4}
                     className="snap-center snap-always min-h-screen flex flex-col justify-center"
                 >
-                    <h1 className="md:hidden">Market Comments</h1>
                     <Waypoint
                         fireOnRapidScroll={false}
                         key="key"

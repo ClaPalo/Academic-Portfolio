@@ -9,7 +9,7 @@ function About(props) {
             <Image
                 src="avatar.png"
                 alt="John Doe"
-                className="m-5 scale-50 md:scale-80"
+                className="m-5 scale-80"
             />
             <Waypoint onEnter={() => props.waypointCallback("1")} />
             <h1 className="text-4xl font-bold">John Doe</h1>

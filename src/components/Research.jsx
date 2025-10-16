@@ -54,11 +54,11 @@ function Research(props) {
 
     return (
         <div className="flex flex-row mt-40 snap-center snap-always noScrollbar scroll-smooth">
-            <div className="hidden md:sticky md:top-16 md:h-screen md:flex md:flex-col md:justify-center">
+            <div className="sticky top-16 h-screen flex flex-col justify-center">
                 <Tabs
                     isVertical
                     size="lg"
-                    className="md:px-10 lg:px-20 font-bold"
+                    className="px-10 lg:px-20 font-bold"
                     color="primary"
                     variant="underlined"
                     selectedKey={selected}
@@ -70,24 +70,10 @@ function Research(props) {
                     <Tab key={"4"} title="Education"></Tab>
                 </Tabs>
             </div>
-            <div className="md:hidden h-screen sticky top-16 flex justify-center items-center">
-                <Slider
-                    orientation="vertical"
-                    className="h-1/3 transition-all ease-in-out"
-                    aria-label="slider"
-                    minValue={0}
-                    maxValue={4}
-                    step={1}
-                    value={sliderValue}
-                    size="sm"
-                    hideThumb
-                    renderThumb={(props) => <div {...props}></div>}
-                ></Slider>
-            </div>
             <div className="h-screen">
                 <Waypoint onEnter={() => props.waypointCallback("2")} />
             </div>
-            <div className="w-full px-5 md:px-0 md:w-2/3 text-pretty overflow-scroll snap-y snap-mandatory h-screen noScrollbar scroll-smooth">
+            <div className="px-0 w-2/3 text-pretty overflow-scroll snap-y snap-mandatory h-screen noScrollbar scroll-smooth">
                 <section
                     ref={publications}
                     className="snap-center snap-always min-h-screen flex flex-col justify-center"
@@ -97,11 +83,10 @@ function Research(props) {
                         key="key"
                         onEnter={() => sectionChanged("1")}
                     />
-                    <h1 className="md:hidden">Research</h1>
                     <h1 className="text-3xl font-bold">
                         Selected Publications
                     </h1>
-                    <div className="hidden md:block">
+                    <div className="block">
                         <h2 className="text-xl font-semibold mt-4">Books</h2>
                         <ul className="list-disc list-inside">
                             <li className="pt-3">
@@ -172,84 +157,6 @@ function Research(props) {
                             </li>
                         </ul>
                     </div>
-                    <div className="md:hidden flex flex-col">
-                        <Tabs placement="top" variant="underlined">
-                            <Tab key="1" title="Books">
-                                <ul className="list-disc list-inside text-sm">
-                                    <li className="pt-3">
-                                        <span className="font-bold">
-                                            “Eu sit sint laboris dolore”
-                                        </span>{" "}
-                                        textbook, Out Soon
-                                    </li>
-                                    <li className="pt-3">
-                                        <Link
-                                            className="font-bold underline text-sm"
-                                            href="https://example.com"
-                                            isExternal
-                                            showAnchorIcon
-                                        >
-                                            “Excepteur nostrud adipisicing”
-                                        </Link>{" "}
-                                        textbook, September 2020
-                                    </li>
-                                    <li className="pt-3">
-                                        <Link
-                                            className="font-bold underline text-sm"
-                                            href="https://example.com"
-                                            isExternal
-                                            showAnchorIcon
-                                        >
-                                            “Veniam velit laboris aliquip est et
-                                            voluptate”
-                                        </Link>{" "}
-                                        textbook, June 2019
-                                    </li>
-                                    <li className="pt-3">
-                                        <Link
-                                            className="font-bold underline text-sm"
-                                            href="https://example.com"
-                                            isExternal
-                                            showAnchorIcon
-                                        >
-                                            “Veniam incididunt sit fugiat”
-                                        </Link>{" "}
-                                        textbook, March 2013
-                                    </li>
-                                </ul>
-                            </Tab>
-                            <Tab key="2" title="Papers">
-                                <ul className="list-disc list-inside text-sm">
-                                    <li className="pt-3">
-                                        <span className="font-bold">
-                                            “Non ad exercitation minim sint sit
-                                            enim occaecat tempor pariatur
-                                            commodo?”
-                                        </span>{" "}
-                                        Ullamco do dolor ut et pariatur, Spring
-                                        2022.
-                                    </li>
-                                    <li className="pt-3">
-                                        <span className="font-bold">
-                                            “Lorem exercitation nulla nulla
-                                            ullamco ex veniam fugiat sit officia
-                                            magna labore nostrud.”
-                                        </span>{" "}
-                                        Journal, August 2021
-                                    </li>
-                                    <li className="pt-3">
-                                        <span className="font-bold">
-                                            “Reprehenderit magna sint tempor
-                                            nostrud sint dolor est aliquip
-                                            dolore nostrud cupidatat ea
-                                            laborum.”
-                                        </span>{" "}
-                                        The Journal, Spring, 2013
-                                    </li>
-                                </ul>
-                            </Tab>
-                        </Tabs>
-                    </div>
                 </section>
                 <section
                     ref={presentations}
@@ -260,11 +167,10 @@ function Research(props) {
                         key="key"
                         onEnter={() => sectionChanged("2")}
                     />
-                    <h1 className="md:hidden">Research</h1>
                     <h1 className="text-3xl font-bold">
                         Selected Presentations
                     </h1>
-                    <ul className="list-disc list-inside text-sm md:text-medium">
+                    <ul className="list-disc list-inside text-medium">
                         <li className="pt-3">
                             <span className="font-bold">
                                 Incredible College
@@ -310,11 +216,10 @@ function Research(props) {
                         key="key"
                         onEnter={() => sectionChanged("3")}
                     />
-                    <h1 className="md:hidden">Research</h1>
                     <h1 className="text-3xl font-bold">
                         Professional Leadership
                     </h1>
-                    <ul className="list-disc list-inside text-sm md:text-medium">
+                    <ul className="list-disc list-inside text-medium">
                         <li className="pt-3">
                             <span className="font-bold">Director</span>, Big
                             Company, 2020-2024
@@ -342,9 +247,8 @@ function Research(props) {
                         key="key"
                         onEnter={() => sectionChanged("4")}
                     />
-                    <h1 className="md:hidden">Research</h1>
                     <h1 className="text-3xl font-bold">Education</h1>
-                    <ul className="list-disc list-inside text-sm md:text-medium">
+                    <ul className="list-disc list-inside text-medium">
                         <li className="pt-3">
                             <span className="font-bold">Ph.D., Economics</span>,
                             University of Universities, 2005
